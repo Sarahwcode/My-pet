@@ -9,6 +9,7 @@ section {
   border-radius: 20px;
   border: solid 1px rgb(238, 221, 190);
 }
+
 h1 {
   font-weight: 700;
   font-size: 60px;
@@ -21,20 +22,45 @@ p {
   color: #402a23;
   line-height: 1.8;
 }
+.nav-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-self: center;
+  list-style: none;
+  font-size: 20px;
+  grid-gap: 50px;
+}
+.nav-flex a {
+  text-decoration: none;
+  color: #402a23;
+}
 .container {
   padding: 50px;
   margin: 20px;
+}
+.header-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .img-fluid {
   width: 100%;
   border-radius: 40px;
   border: solid 1px rgb(238, 221, 190);
   box-shadow: 10px 10px 5px rgb(150, 114, 23);
+  padding: 20px;
+  margin: 20px;
+}
+.img-size {
+  padding: 20px;
 }
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+.grid-1 {
+  padding: 10px;
+}
+
 .form {
   font-size: 40px;
   color: #402a23;
@@ -49,4 +75,38 @@ p {
 .form-submit {
   padding: 10px 20px;
   border-radius: 10px;
+}
+.h2-name {
+  color: #402a23;
+  font-size: 30px;
+}
+.text-centre {
+  text-align: center;
+}
+
+.footer-section {
+  padding-top: 30px;
+}
+.grid-2 {
+  padding: 40px;
+}
+.grid-2 a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #402a23;
+}
+@media (max-width: 900px) {
+  .img-fluid {
+    padding: 0px;
+    margin: 0px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .form-text {
+    padding: 20px;
+  }
+  .nav-flex {
+    padding: 10px;
+  }
 }

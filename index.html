@@ -11,12 +11,37 @@
       href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="index.js"></script>
   </head>
   <body>
     <section>
+      <nav>
+        <ul class="nav-flex">
+          <li class="active">
+            <a href="#"> Home</a>
+          </li>
+          <li>
+            <a href="#"> About </a>
+          </li>
+          <li>
+            <a href="#"> Support</a>
+          </li>
+          <li>
+            <a href="#"> Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <div class="header-section">
+      <section>
+        <h1>Mourn Your Cat</h1>
+      </section>
+    </div>
+
+    <section>
       <div class="container">
-        <h1>My Cat Tiggy</h1>
-        <div class="grid">
+        <h2 class="text-centre h2-name">My Cat Tiggy</h2>
+        <div class="grid grid-1">
           <div>
             <p>
               Tiggy, a mischievous and energetic feline, was a beloved member of
@@ -31,11 +56,11 @@
               personality.
             </p>
           </div>
-          <div>
+          <div class="img-size">
             <img src="images/Tiggy.jpg" alt="" class="img-fluid" />
           </div>
         </div>
-        <form action="" class="form">
+        <form action="" class="form" id="form">
           <div>
             <label for="">What was your cats name?</label>
           </div>
@@ -43,50 +68,49 @@
             type="text"
             class="form-text"
             placeholder="Enter your cats name...."
+            id="form-text"
           />
           <input type="submit" class="form-submit" />
         </form>
-        <h2></h2>
+        <h2 class="h2-name text-centre" id="name-of-cat">
+          Name of cat will appear here...
+        </h2>
       </div>
     </section>
-    <footer>
-      <div class="d-flex justify-content-between contact-box m-4">
-        <div>
-          <h4>Work enquiry</h4>
-          <p class="text-muted">Let's work together</p>
+    <footer class="footer-section">
+      <section>
+        <div class="grid grid-2 text text-centre">
+          <div><a href="#">Pet Support</a></div>
+          <div><a href="#">Name your Cat</a></div>
+          <div><a href="#">Pictures of Cats</a></div>
+          <div><a href="#">Contact us</a></div>
         </div>
-        <div>
-          <a
-            href="contact.html"
-            class="btn btn-branding hidden"
-            title="Email me"
-            >Contact Me</a
-          >
-        </div>
-      </div>
-      <div>
-        <a
-          href="mailto:pet_support@hotmail.com"
-          target="_blank"
-          class="email-link"
-          >pet_support@hotmail.com</a
-        >
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://github.com/Sarahwcode" class="link-space"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a href="#" class="link-space">
-          <i class="fa-brands fa-instagram"></i
-        ></a>
-        <a href="#" class="link-space">
-          <i class="fa-brands fa-facebook"></i
-        ></a>
-      </div>
-      <p class="text-center">
+      </section>
+      <p class="text-centre">
         This Project was coded by Sarah Ward and open sourced on
-        <a href="" target="_blank">GitHub</a>
+        <a href="https://github.com/Sarahwcode/My-pet" target="_blank"
+          >GitHub</a
+        >
       </p>
     </footer>
+    <script>
+      function catName(event) {
+        event.preventDefault();
+        let formSubmit = document.querySelector("#form-text").value;
+        let namePet = document.querySelector("#name-of-cat");
+        namePet.innerHTML = `${formSubmit}`;
+        //let h2Exsist = namePet.querySelector("h2");
+        //if (h2Exsist) {
+        // namePet.removeChild(h2);
+        //}
+        //let h2 = document.createElement("h2");
+        //h2.innerHTML = formSubmit;
+
+        //namePet.appendChild(h2);
+      }
+
+      let nameSubmit = document.querySelector("#form");
+      nameSubmit.addEventListener("submit", catName);
+    </script>
   </body>
 </html>
