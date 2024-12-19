@@ -12,6 +12,120 @@
       rel="stylesheet"
     />
     <script src="index.js"></script>
+    <style>
+      body {
+        font-family: "Poppins", serif;
+      }
+      section {
+        max-width: 1200px;
+        background: #f3bc77;
+        margin: 0px auto;
+        display: block;
+        border-radius: 20px;
+        border: solid 1px rgb(238, 221, 190);
+      }
+
+      h1 {
+        font-weight: 700;
+        font-size: 60px;
+        color: #402a23;
+        text-align: center;
+      }
+      p {
+        font-weight: 700;
+        font-size: 20px;
+        color: #402a23;
+        line-height: 1.8;
+      }
+      .nav-flex {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-self: center;
+        list-style: none;
+        font-size: 20px;
+        grid-gap: 50px;
+      }
+      .nav-flex a {
+        text-decoration: none;
+        color: #402a23;
+      }
+      .container {
+        padding: 50px;
+        margin: 20px;
+      }
+      .header-section {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .img-fluid {
+        width: 100%;
+        border-radius: 40px;
+        border: solid 1px rgb(238, 221, 190);
+        box-shadow: 10px 10px 5px rgb(150, 114, 23);
+        padding: 20px;
+        margin: 20px;
+      }
+      .img-size {
+        padding: 20px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .grid-1 {
+        padding: 10px;
+      }
+
+      .form {
+        font-size: 40px;
+        color: #402a23;
+        font-weight: 500;
+        text-align: center;
+      }
+      .form-text {
+        padding: 5px 60px;
+        font-size: 20px;
+        border-radius: 10px;
+      }
+      .form-submit {
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+      .h2-name {
+        color: #402a23;
+        font-size: 30px;
+      }
+      .text-centre {
+        text-align: center;
+      }
+
+      .footer-section {
+        padding-top: 30px;
+      }
+      .grid-2 {
+        padding: 40px;
+      }
+      .grid-2 a {
+        text-decoration: none;
+        font-size: 20px;
+        color: #402a23;
+      }
+      @media (max-width: 900px) {
+        .img-fluid {
+          padding: 0px;
+          margin: 0px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .form-text {
+          padding: 20px;
+        }
+        .nav-flex {
+          padding: 10px;
+        }
+      }
+    </style>
   </head>
   <body>
     <section>
@@ -57,7 +171,11 @@
             </p>
           </div>
           <div class="img-size">
-            <img src="images/Tiggy.jpg" alt="" class="img-fluid" />
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/152/976/original/Tiggy.jpg?1734366159"
+              alt=""
+              class="img-fluid"
+            />
           </div>
         </div>
         <form action="" class="form" id="form">
